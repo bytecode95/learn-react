@@ -4,6 +4,12 @@ import { useState } from "react"
 export default function Page1(){
 
     //the initial value is only used during the initial render of the component. Subsequent renders will use the current state value, and the initial value will not be used again.
+    //State Update (After Button Click):
+    //React creates a new Virtual DOM tree representing the updated UI with the span containing 'new count value' and the button.
+    //Reconciliation and Updating the DOM
+    //React calculates the minimal set of changes needed to update the real DOM.
+    //It efficiently updates only the necessary part of the DOM, avoiding unnecessary re-renders.
+
     const[count, setCount] = useState(0);
 
     const decrementCount = () => {
